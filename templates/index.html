@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>納品その前に</title>
+</head>
+<body>
+<h1>納品その前に</h1>
+
+<p>「よし、これから納品するぞ。」ちょっと待って！なにか大切なことを忘れていませんか？</p>
+
+<p>そう、納品するxlsファイルの選択シートを一番左に、そしてカーソル位置をA1に戻すことですね。人として当然の所作です。</p>
+
+<p>当ページはそれを強力にサポートします</p>
+
+<form action="upload" method="post" enctype="multipart/form-data" target="_blank">
+    <input type="file" name="xlsfile"/>
+    <button type="submit">アップロードして所作</button>
+    {% csrf_token %}
+</form>
+</body>
+</html>
