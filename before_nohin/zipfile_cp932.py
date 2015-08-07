@@ -47,5 +47,7 @@ def infolist(self):
 ZipFile.infolist = infolist
 
 def namelist(self):
-    return map(lambda info: info.filename, self.infolist())
+    return [info.filename for info in self.infolist()]
+    # これだとうまく動かない。何ででしょう。
+    # return map(lambda info: info.filename, self.infolist())
 ZipFile.namelist = namelist

@@ -140,3 +140,4 @@ def _reset_sheet(worksheet):
     view.zoomScaleNormal = "100"
     view.zoomScalePageLayoutView = "100"
     view.selection = (Selection(activeCell="A1", sqref="A1"),)
+    view.tabSelected = "0"
