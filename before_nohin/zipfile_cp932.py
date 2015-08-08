@@ -2,6 +2,8 @@
 
 __author__ = 'koty'
 from zipfile import *
+import chardet
+
 """
 zip内のファイル名の文字化け対策
 http://d.hatena.ne.jp/yatt/20110326/1301123145
@@ -20,14 +22,15 @@ def as_unicode_path(path):
     #if type(path) is unicode:
     #    return path
 
-    for enc in ['utf-8', 'sjis', 'cp932', 'euc-jp', 'iso-2022-jp']:
-        try:
-            return path.decode(enc)
-        except:
-            try:
-                return path.encode('cp437').decode('utf8')
-            except:
-                pass
+    try:
+        path_bytes = path.encode('cp437')
+        detect_enc = chardet.detect(path_bytes)
+        if detect_enc['confidence'] > 0:
+            return path_bytes.decode(detect_enc['encoding'])
+        else:
+            return path_bytes.decode('SHIFT_JIS')
+    except:
+        pass
 
     # assume cp932 encoding including dame-moji
     try:
