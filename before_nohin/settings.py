@@ -25,7 +25,7 @@ SECRET_KEY = 'jmerw6v+s%%1=!0lr9s^cdntuu0fr9y!kc4f7=qpa*=#8@vzf6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'before-nohin.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'before-nohin.herokuapp.com', 'before-nohin.b-sw.co']
 
 
 # Application definition
