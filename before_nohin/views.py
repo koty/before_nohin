@@ -9,7 +9,7 @@ import zipfile
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators.http import require_POST, require_GET
 import openpyxl
-from openpyxl.worksheet import Selection
+from openpyxl.worksheet.views import Selection
 import urllib.parse
 import before_nohin.zipfile_cp932
 
