@@ -1,0 +1,13 @@
+[project]
+name = "before-nohin"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chardet==2.3.0",
+    "django>=5.0",
+    "gunicorn==19.9.0",
+    "jdcal==1.4",
+    "openpyxl==2.4.2",
+]

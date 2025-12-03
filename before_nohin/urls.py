@@ -13,11 +13,11 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.urls import re_path
 from before_nohin import views
 
 urlpatterns = [
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index, name='index'),
-    url(r'^upload/?$', views.upload, name='index'),
+    re_path(r'^$', views.index, name='index'),
+    re_path(r'^upload/?$', views.upload, name='index'),
 ]
